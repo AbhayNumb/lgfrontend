@@ -27,7 +27,7 @@ const Dashboard = () => {
   const [displaydata, setdisplaydata] = useState("None");
   const [searchkeyword, setsearchkeyword] = useState("");
   const [currentpage, setCurrentPage] = useState(1);
-  const [maxele, setMaxele] = useState(5);
+  const [maxele, setMaxele] = useState(7);
   useEffect(() => {
     initFlowbite();
   }, []);
@@ -647,7 +647,7 @@ const Dashboard = () => {
                           {currentpage}
                         </a>
                       </li>
-                      {currentpage * maxele <= displaydata.length ? (
+                      {currentpage * maxele < displaydata.length ? (
                         <li
                           onClick={(e) => handlepagination(e, currentpage + 1)}
                         >
