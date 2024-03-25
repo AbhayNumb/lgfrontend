@@ -730,7 +730,7 @@ const Dashboard = () => {
                       class="block fixed  overflow-x-hidden  top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
                       style={{
                         paddingTop: "4rem",
-                        paddingLeft: "45rem",
+                        paddingLeft: "40rem",
                       }}
                     >
                       <div class="relative p-4 w-full max-w-md max-h-full">
