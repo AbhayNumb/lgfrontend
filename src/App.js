@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Dashboard from "./components/dashboard";
+import Login from "./components/login";
+import WebContextProvider from "./context/contextprovider";
+import toast, { Toaster } from "react-hot-toast";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Sidebar from "./components/sidebar";
+import ChartComp from "./components/chart";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <WebContextProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route
+            path="/dashboard"
+            element={
+              <div>
+                <Sidebar />
+                <Dashboard />
+              </div>
+            }
+          />
+          <Route
+            path="/dashboard/charts"
+            element={
+              <div>
+                <Sidebar />
+                <ChartComp />
+              </div>
+            }
+          />
+        </Routes>
+        <Toaster />
+      </WebContextProvider>
+    </Router>
   );
 }
 
