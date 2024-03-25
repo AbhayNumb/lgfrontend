@@ -100,7 +100,9 @@ const ChartComp = () => {
           ) : (
             <>
               <Doughnut data={data} />
+              <>Distribution By Record Type</>
               <Doughnut data={namedata} />
+              <>Distribution By Record Name</>
             </>
           )}
         </div>

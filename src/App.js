@@ -1,4 +1,6 @@
 import "./App.css";
+import "flowbite";
+
 import Dashboard from "./components/dashboard";
 import Login from "./components/login";
 import WebContextProvider from "./context/contextprovider";
